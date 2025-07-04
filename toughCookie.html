@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tough Cookie – Cracking Good Content</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery + GSAP -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Dein Hauptskript -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Video-Hintergrund -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/video/title1.mp4" type="video/mp4">
+    Dein Browser unterstützt kein HTML5-Video.
+  </video>
+
+  <!-- Weißer Overlay -->
+  <div id="white-overlay"></div>
+
+  <!-- Startbereich -->
+  <section id="home">
+    <div id="logo-container">
+      <img src="assets/images/title.png" alt="Tough Cookie Logo" id="logo">
+      <div id="slogan">CRACKING GOOD CONTENT</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="angled-banner">
+        <div class="banner-line rotate-left">ABOUT US</div>
+        <div class="banner-line rotate-right">OR A VERY TASTY CONTENT PIECE?</div>
+      </div>
+
+      <div class="service_cards_wrapper">
+        <div class="service_card_wrapper">
+          <img src="assets/images/Mitarbeiter1.png" class="card-person" alt="">
+          <div class="service_card"><h3>Vince</h3>
+            <p>Wir entwickeln nachhaltige Content-Strategien ...</p></div>
+        </div>
+        <div class="service_card_wrapper">
+          <img src="assets/images/Mitarbeiter2.png" class="card-person" alt="">
+          <div class="service_card"><h3>Anke</h3>
+            <p>Wir entwickeln nachhaltige Content-Strategien ...</p></div>
+        </div>
+        <div class="service_card_wrapper">
+          <img src="assets/images/Mitarbeiter3.png" class="card-person" alt="">
+          <div class="service_card"><h3>Jakob</h3>
+            <p>Wir entwickeln nachhaltige Content-Strategien ...</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Hintergrund-Marquee -->
+<div class="diagonal-divider light">
+  <div class="marquee-wrapper">
+    <div class="marquee-content">
+      SOCIAL MEDIA. GASTRO. HOTELS. FOOD LOVERS. DIGITAL STRATEGIES. &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+</div>
+
+<!-- Vordergrund-Marquee -->
+<div class="diagonal-divider dark">
+  <div class="marquee-wrapper">
+    <div class="marquee-content">
+      MEDIA AGENCY FOR HOTELS. FOR GASTRO. FOR FOODIES. SOCIAL MEDIA AGENCY &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+</div>
+
+  <section id="projects" style="height: 600px; background: #000000;"></section>
+
+  <!-- Logo oben links -->
+  <img src="assets/images/title.png" alt="Tough Cookie Logo" id="corner-logo">
+
+</body>
+</html>
+
+
