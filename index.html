@@ -1,102 +1,307 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tough Cookie – Cracking Good Content</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tough Cookie – Cracking Good Content</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FBS Machro Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-  <!-- jQuery + GSAP -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <!-- Dein Hauptskript -->
-  <script src="js/main.js" defer></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery + GSAP -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Dein Hauptskript -->
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav id="main-nav">
-    <ul>
-      <li><a href="#home">HOME</a></li>
-      <li><a href="#about">ABOUT US</a></li>
-      <li><a href="#projects">PROJECTS</a></li>
-      <li><a href="#contact">CONTACT</a></li>
+<!-- Navigation mit Burger-Menü -->
+<nav id="main-nav">
+    <!-- Burger-Button -->
+    <button id="burger-button" class="burger-button" aria-label="Menü öffnen/schließen">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+
+    <!-- Navigation Overlay -->
+    <div id="nav-overlay" class="nav-overlay">
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">HOME</a></li>
+            <li><a href="#about" class="nav-link">ABOUT US</a></li>
+            <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Desktop Navigation (bleibt unverändert) -->
+    <ul class="desktop-nav">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
     </ul>
-  </nav>
+</nav>
 
-  <!-- Video-Hintergrund -->
-  <video autoplay muted loop id="bg-video">
-    <source src="assets/video/title1.mp4" type="video/mp4">
+<!-- Video-Hintergrund -->
+<video autoplay muted loop id="bg-video">
+    <source src="assets/video/dpKlein.mp4" type="video/mp4">
     Dein Browser unterstützt kein HTML5-Video.
-  </video>
+</video>
 
-  <!-- Weißer Overlay -->
-  <div id="white-overlay"></div>
+<!-- Weißer Overlay -->
+<div id="white-overlay"></div>
 
-  <!-- Startbereich -->
-  <section id="home">
+<!-- Startbereich -->
+<section id="home">
     <div id="logo-container">
-      <img src="assets/images/title.png" alt="Tough Cookie Logo" id="logo">
-      <div id="slogan">CRACKING GOOD CONTENT</div>
+        <img src="assets/images/title.png" alt="Tough Cookie Logo" id="logo">
+        <div id="slogan">CRACKING GOOD CONTENT</div>
     </div>
-  </section>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
+<!-- ABOUT -->
+<section id="about">
     <div class="about-inner">
-      <div class="angled-banner">
-        <div class="banner-line rotate-left">ABOUT US</div>
-        <div class="banner-line rotate-right">OR A VERY TASTY CONTENT PIECE?</div>
-      </div>
 
-      <div class="service_cards_wrapper">
-        <div class="service_card_wrapper">
-          <img src="assets/images/Mitarbeiter1.png" class="card-person" alt="">
-          <div class="service_card"><h3>Vince</h3>
-            <p>Wir entwickeln nachhaltige Content-Strategien ...</p></div>
+        <div class="background-text">
+            <span>We don't</span>
+            <span>crumble</span>
+            <span>under</span>
+            <span>pressure</span>
         </div>
-        <div class="service_card_wrapper">
-          <img src="assets/images/Mitarbeiter2.png" class="card-person" alt="">
-          <div class="service_card"><h3>Anke</h3>
-            <p>Wir entwickeln nachhaltige Content-Strategien ...</p></div>
+
+        <div class="angled-banner">
+            <div class="banner-line rotate-left">ABOUT US</div>
+            <div class="banner-line rotate-right">OR A VERY TASTY CONTENT PIECE?</div>
         </div>
-        <div class="service_card_wrapper">
-          <img src="assets/images/Mitarbeiter3.png" class="card-person" alt="">
-          <div class="service_card"><h3>Jakob</h3>
-            <p>Wir entwickeln nachhaltige Content-Strategien ...</p></div>
+
+        <div class="team-wrapper">
+            <div class="team-member">
+                <div class="team-left">
+                    <img src="assets/images/Mitarbeiter1.png" class="team-person" alt="Vince">
+                    <div class="team-name-banner">
+                        <div class="name-line rotate-left">Vince</div>
+                    </div>
+                </div>
+                <div class="team-description team-description-right">
+                    <p>Wir entwickeln nachhaltige Content-Strategien, die Ihre Marke authentisch und kraftvoll präsentieren. Von der ersten Idee bis zur finalen Umsetzung stehen wir für kreative Exzellenz.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-left">
+                    <img src="assets/images/Mitarbeiter2.png" class="team-person" alt="Anke">
+                    <div class="team-name-banner">
+                        <div class="name-line rotate-right">Anke</div>
+                    </div>
+                </div>
+                <div class="team-description team-description-left">
+                    <p>Spezialisiert auf visuelle Geschichten, die bewegen und inspirieren. Mit einem Auge für Details und einem Gespür für Trends schaffen wir Content, der im Gedächtnis bleibt.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-left">
+                    <img src="assets/images/Mitarbeiter3.png" class="team-person" alt="Jakob">
+                    <div class="team-name-banner">
+                        <div class="name-line rotate-left">Jakob</div>
+                    </div>
+                </div>
+                <div class="team-description team-description-right">
+                    <p>Unser Stratege für digitale Präsenz. Von Social Media bis zu komplexen Kampagnen - Jakob sorgt dafür, dass Ihr Content die richtige Zielgruppe zur richtigen Zeit erreicht.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+
 
 <!-- Hintergrund-Marquee -->
 <div class="diagonal-divider light">
-  <div class="marquee-wrapper">
-    <div class="marquee-content">
-      SOCIAL MEDIA. GASTRO. HOTELS. FOOD LOVERS. DIGITAL STRATEGIES. &nbsp;&nbsp;&nbsp;
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            SOCIAL MEDIA. GASTRO. HOTELS. FOOD LOVERS. DIGITAL STRATEGIES. &nbsp;&nbsp;&nbsp;
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- Vordergrund-Marquee -->
 <div class="diagonal-divider dark">
-  <div class="marquee-wrapper">
-    <div class="marquee-content">
-      MEDIA AGENCY FOR HOTELS. FOR GASTRO. FOR FOODIES. SOCIAL MEDIA AGENCY &nbsp;&nbsp;&nbsp;
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            MEDIA AGENCY FOR HOTELS. FOR GASTRO. FOR FOODIES. SOCIAL MEDIA AGENCY &nbsp;&nbsp;&nbsp;
+        </div>
     </div>
-  </div>
 </div>
 
-  <section id="projects" style="height: 600px; background: #000000;"></section>
+<section id="projects">
+    <div class="projects-inner">
+        <h2>Our Projects</h2>
+        <p>Hier zeigen wir einige ausgewählte Content-Projekte, die wir für unsere Kunden realisiert haben.</p>
 
-  <!-- Logo oben links -->
-  <img src="assets/images/title.png" alt="Tough Cookie Logo" id="corner-logo">
+        <!-- Card Carousel Container -->
+        <div class="card-carousel-container">
+            <div class="swiper project-carousel">
+                <div class="swiper-wrapper">
+
+                    <!-- Project Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="project-video-card">
+                            <video class="project-video" muted loop preload="metadata">
+                                <source src="assets/video/dpKlein.mp4" type="video/mp4">
+                                Ihr Browser unterstützt kein HTML5-Video.
+                            </video>
+                            <div class="project-card-overlay">
+                                <button class="more-button">More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="project-video-card">
+                            <video class="project-video" muted loop preload="metadata">
+                                <source src="assets/video/konoKlein.mp4" type="video/mp4">
+                                Ihr Browser unterstützt kein HTML5-Video.
+                            </video>
+                            <div class="project-card-overlay">
+                                <button class="more-button">More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="project-video-card">
+                            <video class="project-video" muted loop preload="metadata">
+                                <source src="assets/video/steigenbergerKlein.mp4" type="video/mp4">
+                                Ihr Browser unterstützt kein HTML5-Video.
+                            </video>
+                            <div class="project-card-overlay">
+                                <button class="more-button">More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- Project Details Container -->
+
+        <!-- Project Details Container -->
+        <div class="project-details-container" id="projectDetailsContainer">
+            <button class="close-details-btn" id="closeDetailsBtn">✕</button>
+
+            <div class="project-details-content">
+                <div class="detail-item active" data-project="0">
+                    <div class="detail-content">
+                        <div class="detail-meta-banners">
+                            <div class="detail-meta-banner">🎥 Creator-style visuals with bold edits</div>
+                            <div class="detail-meta-banner">📍 Munich & Paris showrooms, street & BTS</div>
+                            <div class="detail-meta-banner">🧠 We tell a vibe, not just show a room</div>
+                        </div>
+                        <div class="detail-description">
+                            <p>We don't do standard fashion videos. Instead, we craft cinematic, vibe-driven content that
+                                captures your brand's energy. Not just your clothes and rooms. For this fashion agency, we
+                                created a series of showroom visuals that feel fast forward, trendy and disrupting. With
+                                models, fast-paced edits, and creative transitions, we shaped a digital-first experience
+                                blending cinematic style, atmosphere, and intention.</p>
+                            <p>We also covered their Paris Showrooms during Paris Fashion Week from a content-first
+                                perspective that include the Parisian vibe, BTS moments, and bold social snippets that go
+                                beyond rooms and clothes.</p>
+                            <ul>
+                                <li>Conceptual direction tailored to brand vibe</li>
+                                <li>Movement-driven camera work (steady, handheld, dynamic)</li>
+                                <li>Editing that fits the platform & audience</li>
+                                <li>Real storytelling > surface-level showroom shots</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-title-sidebar">
+                        <div class="detail-title-vertical">Fashion Showrooms & Paris Fashion Week</div>
+                    </div>
+                </div>
+
+                <div class="detail-item" data-project="1">
+                    <div class="detail-content">
+                        <div class="detail-meta-banners">
+                            <div class="detail-meta-banner">🎥 Luxury hospitality visuals with elegant cinematography</div>
+                            <div class="detail-meta-banner">📍 Premium hotel locations across Europe</div>
+                            <div class="detail-meta-banner">🧠 Capturing the essence of luxury hospitality</div>
+                        </div>
+                        <div class="detail-description">
+                            <p>Luxury hotels need more than beautiful rooms - they need stories that transport guests before
+                                they even arrive. Our content strategy creates immersive experiences that showcase not just
+                                amenities, but the feeling of being there.</p>
+                            <ul>
+                                <li>Strategic content planning for multiple touchpoints</li>
+                                <li>Cinematic storytelling that emphasizes experience</li>
+                                <li>Multi-platform content optimization</li>
+                                <li>Brand consistency across all visual elements</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-title-sidebar">
+                        <div class="detail-title-vertical">Hotel Content Strategy</div>
+                    </div>
+                </div>
+
+                <div class="detail-item" data-project="2">
+                    <div class="detail-content">
+                        <div class="detail-meta-banners">
+                            <div class="detail-meta-banner">🎥 Authentic food content with viral potential</div>
+                            <div class="detail-meta-banner">📍 Various restaurants and food locations</div>
+                            <div class="detail-meta-banner">🧠 Creating food content that makes people hungry</div>
+                        </div>
+                        <div class="detail-description">
+                            <p>Food content that stops the scroll. We create viral-ready content that combines authentic
+                                food experiences with strategic social media planning. Each piece is crafted to engage,
+                                inspire, and convert viewers into customers.</p>
+                            <ul>
+                                <li>Viral marketing strategies tailored to food industry</li>
+                                <li>Authentic storytelling that builds trust</li>
+                                <li>Platform-specific content optimization</li>
+                                <li>Influencer collaboration and community building</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-title-sidebar">
+                        <div class="detail-title-vertical">Food Blog Kampagne</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="footer-wrapper">
+    <div class="footer-logo">THE <strong>VISIBLE</strong> COACH</div>
+    <div class="vertical-text">
+        CREATED IN 2025 BY
+    </div>
+</div>
+
+<!-- Logo oben links -->
+<img src="assets/images/title.png" alt="Tough Cookie Logo" id="corner-logo">
 
 </body>
 </html>
-
-
